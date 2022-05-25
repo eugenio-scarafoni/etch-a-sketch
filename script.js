@@ -1,5 +1,8 @@
 function createGrid () {
-    const dimension = prompt("Insert dimension of new grid (maximum 100)")
+    let dimension = prompt("Insert dimension of new grid (maximum 100)")
+    while (dimension<1 || dimension>100 || isNaN(dimension)) {
+        dimension = prompt("Insert dimension of new grid (maximum 100)");
+    }
     removeOldGrid()
     for (let i=0; i<dimension; i++) {
 
